@@ -390,8 +390,23 @@ footer{
         <details>
           <summary>Abstract</summary>
           <div class="body">
-            <p>I build an hourly panel of 43 million observations covering roughly 50,000 markets from Polymarket's API, and apply Shannon's information theory to quantify how much outcome uncertainty is resolved by market prices. Prices resolve 53.65% of outcome uncertainty on average, rising from 36.36% more than four months before resolution to over 90% one day out, a pattern that is robust across market structures (Negative Risk versus standard). Testing Samuelson's martingale property, I find deviations from a fair game that are statistically significant but economically negligible (R² = 0.025), consistent with the efficient incorporation of information into prices.</p>
-          </div>
+            <p>Prediction markets are typically evaluated on whether their prices are 
+            well calibrated forecasts of eventual outcomes. This paper asks a 
+            different question: how informative are prices? We use Shannon entropy 
+            and mutual information
+            to quantify how much information observing prices tells us about the final 
+            outcome. Using a panel of roughly 50,000 closed binary markets on Polymarket,
+            we find that observing prices on average resolves 53.65\% of uncertainty surrounding 
+            outcomes, consistent across different market structures. Even over 
+            four months from resolution, prices reduce 36.36\% of uncertainty, that 
+            figure jumping up to 90\% one day from resolution. Finally, following 
+            Samuelson's martingales, we show that while price changes are statistically 
+            predictable, any departure from a fair game is economically negligible, 
+            consistent with prices closely following an efficient information aggregation
+            process. These findings are largely consistent with Hayek's claim that 
+            prices aggregate dispersed information, with only small, though significant, 
+            departures from perfect efficiency. 
+         </div>
         </details>
       </div>
 
@@ -472,8 +487,8 @@ footer{
           <span class="meta">The only second-year economics student selected; research in game theory with incomplete information.</span>
         </li>
         <li>
-          <span class="what">Project Euler</span>, top 4% of 1.35 million users.<br>
-          <span class="meta">58 problems solved, including problems at 50% difficulty in number theory, algorithms and dynamic programming.</span>
+          <span class="what">Project Euler</span>, top 5.6% of 925,000 users.<br>
+          <span class="meta">58 problems solved, including problems in number theory, algorithms and dynamic programming.</span>
         </li>
       </ul>
     </section>
