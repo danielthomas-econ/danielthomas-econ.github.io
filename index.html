@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniel Johann Thomas</title>
+
+<!-- ============================================================
+     LINKS TO FILL IN before you publish (search for "FILL IN"):
+       1. cv.pdf                              -> drop your CV in the repo root
+       2. papers/priced-in-bit-by-bit.pdf     -> prediction markets paper
+       3. papers/strategic-deception.pdf      -> Nagpaul paper
+       4. GitHub repo URLs (3 of them)
+       5. The Vitta article URL
+       6. og:url / canonical, if your site lives somewhere else
+     ============================================================ -->
+
+<meta name="description" content="Daniel Johann Thomas is an undergraduate economist at St. Stephen's College, University of Delhi, working on information aggregation in markets, games of incomplete information, and computational economics.">
+<link rel="canonical" href="https://danielthomas-econ.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Daniel Johann Thomas">
+<meta property="og:description" content="Undergraduate economist at St. Stephen's College, University of Delhi. Information economics, market efficiency, and computational methods.">
+<meta property="og:url" content="https://danielthomas-econ.github.io/">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#FAFAF7;
+  --ink:#1E2A2E;
+  --muted:#67726F;
+  --rule:#E2E1DA;
+  --accent:#A33A2B;
+  --rail-bg:#1E2A2E;
+  --rail-ink:#EDEFEC;
+  --rail-muted:#9DA9A8;
+  --rail-rule:#33413F;
+  --rail-accent:#CE6152;
+  --serif:'Source Serif 4','Iowan Old Style',Georgia,'Times New Roman',serif;
+  --sans:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#15191A;
+    --ink:#E4E8E5;
+    --muted:#96A09E;
+    --rule:#29312F;
+    --accent:#E08272;
+    --rail-bg:#0E1213;
+    --rail-ink:#E9ECEA;
+    --rail-muted:#8E9A98;
+    --rail-rule:#252D2E;
+    --rail-accent:#E08272;
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:17px;
+  line-height:1.62;
+  font-synthesis-weight:none;
+  -webkit-font-smoothing:antialiased;
+}
+
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:10;
+  background:var(--paper);color:var(--accent);
+  padding:.6rem 1rem;font-family:var(--sans);font-size:.85rem;
+}
+.skip:focus{left:0;}
+
+a{color:inherit;}
+a:focus-visible,summary:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  border-radius:1px;
+}
+
+/* ---------- layout ---------- */
+.shell{
+  display:grid;
+  grid-template-columns:300px minmax(0,1fr);
+  min-height:100vh;
+  background:linear-gradient(to right,var(--rail-bg) 0 300px,var(--paper) 300px);
+}
+
+/* ---------- rail ---------- */
+.rail{
+  background:var(--rail-bg);
+  color:var(--rail-ink);
+  padding:3.4rem 2rem 2.4rem;
+  position:sticky;top:0;
+  height:100vh;height:100dvh;
+  overflow-y:auto;
+}
+.rail .portrait{
+  display:block;width:104px;height:104px;
+  object-fit:cover;border-radius:50%;
+  margin:0 0 1.6rem;
+}
+.rail h1{
+  font-family:var(--serif);
+  font-size:2.45rem;
+  font-weight:600;
+  line-height:1.0;
+  letter-spacing:-.02em;
+  margin:0;
+}
+.rail h1 span{display:block;}
+.mark{
+  width:34px;height:2px;
+  background:var(--rail-accent);
+  margin:1.15rem 0 1.05rem;
+}
+.rail .role{
+  font-family:var(--sans);
+  font-size:.83rem;
+  line-height:1.55;
+  color:var(--rail-muted);
+  margin:0;
+}
+.rail nav{margin-top:2rem;}
+.rail ul{list-style:none;margin:0;padding:0;}
+.rail li{margin:0 0 .42rem;}
+.rail nav a,.contact a{
+  font-family:var(--sans);
+  font-size:.86rem;
+  color:var(--rail-ink);
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  padding-bottom:1px;
+  transition:border-color .15s ease,color .15s ease;
+}
+.rail nav a:hover,.contact a:hover{
+  color:var(--rail-accent);
+  border-bottom-color:var(--rail-accent);
+}
+.contact{
+  margin-top:1.9rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--rail-rule);
+}
+.contact a{word-break:break-word;}
+
+/* ---------- content ---------- */
+main{padding:3.6rem 3.4rem 5rem;max-width:47rem;}
+section{margin:0 0 3.1rem;scroll-margin-top:1.5rem;}
+section:first-of-type{margin-top:0;}
+section + section{
+  padding-top:2.9rem;
+  border-top:1px solid var(--rule);
+}
+h2{
+  font-family:var(--serif);
+  font-size:1.36rem;
+  font-weight:600;
+  letter-spacing:-.01em;
+  margin:0 0 1.35rem;
+  scroll-margin-top:1.5rem;
+}
+h3{
+  font-family:var(--sans);
+  font-size:.85rem;
+  font-weight:500;
+  letter-spacing:.01em;
+  color:var(--ink);
+  margin:2.6rem 0 1.35rem;
+  padding-bottom:.45rem;
+  border-bottom:1px solid var(--rule);
+}
+h3:first-of-type{margin-top:0;}
+p{margin:0 0 1.05rem;max-width:66ch;}
+p:last-child{margin-bottom:0;}
+
+.lede p{font-size:1.06rem;}
+.interests{
+  font-family:var(--sans);
+  font-size:.88rem;
+  line-height:1.6;
+  color:var(--muted);
+  max-width:60ch;
+  margin-top:1.5rem;
+}
+
+/* ---------- entries ---------- */
+.entry{margin:0 0 2.15rem;max-width:66ch;}
+.entry:last-child{margin-bottom:0;}
+.entry .title{
+  font-size:1.1rem;
+  font-weight:600;
+  line-height:1.38;
+  margin:0 0 .3rem;
+  max-width:none;
+}
+.entry .title a{
+  text-decoration:none;
+  border-bottom:1px solid var(--rule);
+  transition:border-color .15s ease,color .15s ease;
+}
+.entry .title a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+.meta{
+  font-family:var(--sans);
+  font-size:.82rem;
+  line-height:1.55;
+  color:var(--muted);
+  margin:0 0 .55rem;
+  max-width:none;
+}
+.meta em{font-family:var(--serif);font-size:.9rem;font-style:italic;}
+.summary{margin:0 0 .6rem;}
+
+.links{
+  font-family:var(--sans);
+  font-size:.82rem;
+  margin:.55rem 0 0;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:.55rem .9rem;
+  max-width:none;
+}
+.links a{
+  color:var(--accent);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule);
+  padding-bottom:1px;
+  transition:border-color .15s ease;
+}
+.links a:hover{border-bottom-color:var(--accent);}
+.links .sep{
+  display:inline-block;
+  width:1px;height:.82rem;
+  background:var(--rule);
+}
+
+/* ---------- abstracts ---------- */
+details{margin-top:.7rem;max-width:66ch;}
+summary{
+  font-family:var(--sans);
+  font-size:.82rem;
+  color:var(--accent);
+  cursor:pointer;
+  list-style:none;
+  display:inline-flex;
+  align-items:baseline;
+  gap:.42rem;
+}
+summary::-webkit-details-marker{display:none;}
+summary::before{
+  content:"+";
+  font-family:var(--sans);
+  font-size:.86rem;
+  line-height:1;
+  color:var(--muted);
+}
+details[open] summary::before{content:"\2212";}
+details[open] summary{margin-bottom:.6rem;}
+details .body{
+  font-size:.97rem;
+  color:var(--muted);
+  border-left:1px solid var(--rule);
+  padding-left:1.1rem;
+}
+details .body p{color:var(--muted);}
+
+/* ---------- compact lists ---------- */
+.stack{list-style:none;margin:0;padding:0;max-width:66ch;}
+.stack > li{margin:0 0 1.4rem;}
+.stack > li:last-child{margin-bottom:0;}
+.stack .what{font-weight:600;}
+.spaced{margin-top:1.6rem;}
+.tools{
+  font-family:var(--sans);
+  font-size:.9rem;
+  line-height:1.72;
+  max-width:62ch;
+}
+.tools dt{color:var(--muted);font-size:.78rem;margin-top:1.1rem;}
+.tools dt:first-child{margin-top:0;}
+.tools dd{margin:.15rem 0 0;}
+
+footer{
+  margin-top:3.4rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--rule);
+  font-family:var(--sans);
+  font-size:.79rem;
+  color:var(--muted);
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .shell{grid-template-columns:1fr;background:var(--paper);}
+  .rail{
+    position:static;height:auto;
+    padding:2.6rem 1.6rem 2.2rem;
+  }
+  .rail h1{font-size:2.15rem;}
+  .rail nav{margin-top:1.6rem;}
+  .rail nav ul{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;}
+  .rail nav li{margin:0;}
+  .contact ul{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;}
+  main{padding:2.6rem 1.6rem 3.4rem;}
+  section{margin-bottom:2.5rem;}
+  section + section{padding-top:2.4rem;}
+}
+@media (max-width:420px){
+  body{font-size:16px;}
+  .rail h1{font-size:1.95rem;}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{transition:none !important;}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="shell">
+
+  <aside class="rail">
+    <!-- Optional photo: drop a square headshot at img/portrait.jpg and uncomment.
+    <img class="portrait" src="img/portrait.jpg" alt="Daniel Johann Thomas">
+    -->
+
+    <h1><span>Daniel</span><span>Johann</span><span>Thomas</span></h1>
+    <div class="mark"></div>
+    <p class="role">
+      B.A. (Honors) Economics<br>
+      St.&nbsp;Stephen's College<br>
+      University of Delhi
+    </p>
+
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#tools">Software</a></li>
+      </ul>
+    </nav>
+
+    <div class="contact">
+      <ul>
+        <li><a href="mailto:danieljohannthomas@gmail.com">Email</a></li>
+        <li><a href="https://github.com/danielthomas-econ">GitHub</a></li>
+        <!-- FILL IN: put your CV at the repo root as cv.pdf -->
+        <li><a href="Daniel Thomas - CV.pdf">Curriculum vitae</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main id="main">
+
+    <section id="about" class="lede">
+      <h2>About</h2>
+      <p>I study economics at St. Stephen's College, University of Delhi, and expect to graduate in 2027. In 2025 I was the Professor Nagpaul Fellow at the college's Department of Mathematics, where I worked on game theory with incomplete information.</p>
+      <p>My research is about information: how much of it market prices actually aggregate, and how strategic agents behave when they cannot identify the state of the world they are in. The work tends to be computational as well as theoretical — a 43-million-row panel of prediction market prices, a million-agent housing market, a two-period Bayesian duopoly.</p>
+      <p class="interests">Interests: information economics, market efficiency and price discovery, game theory with incomplete information, computational and agent-based methods.</p>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+
+      <h3>Working papers</h3>
+
+      <div class="entry">
+        <!-- FILL IN: papers/priced-in-bit-by-bit.pdf -->
+        <p class="title"><a href="papers/polymarket.pdf">Priced In, Bit by Bit: Measuring Information Aggregation in Prediction Markets</a></p>
+        <p class="meta">September 2026</p>
+        <p class="summary">How much of an event's outcome uncertainty is resolved by its market price, measured in bits, across 50,000 Polymarket markets.</p>
+        <p class="links">
+          <a href="papers/priced-in-bit-by-bit.pdf">Paper</a>
+          <span class="sep" aria-hidden="true"></span>
+          <!-- FILL IN: replace with the repository URL -->
+          <a href="https://github.com/danielthomas-econ">Code and data</a>
+        </p>
+        <details>
+          <summary>Abstract</summary>
+          <div class="body">
+            <p>I build an hourly panel of 43 million observations covering roughly 50,000 markets from Polymarket's API, and apply Shannon's information theory to quantify how much outcome uncertainty is resolved by market prices. Prices resolve 53.65% of outcome uncertainty on average, rising from 36.36% more than four months before resolution to over 90% one day out, a pattern that is robust across market structures (Negative Risk versus standard). Testing Samuelson's martingale property, I find deviations from a fair game that are statistically significant but economically negligible (R² = 0.025), consistent with the efficient incorporation of information into prices.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="entry">
+        <!-- FILL IN: papers/strategic-deception.pdf -->
+        <p class="title"><a href="papers/strategic-deception.pdf">Strategic Deception under Non-Identifiable Demand</a></p>
+        <p class="meta">Professor Nagpaul Fellowship, advised by Prof. Anant Singh. May 2026.</p>
+        <p class="summary">What happens to deceptive marketing when firms cannot learn the demand regime they are facing from the sales they observe.</p>
+        <p class="links">
+          <a href="papers/strategic-deception.pdf">Paper</a>
+        </p>
+        <details>
+          <summary>Abstract</summary>
+          <div class="body">
+            <p>I develop a two-period Bayesian duopoly in which firms choose how much to deceive consumers whose tolerance for deception is unknown, and in which observed sales cannot identify true market demand because demand mappings overlap across regimes. Heterogeneity in beliefs generates a unique asymmetric Bayesian Nash equilibrium with strategic complementarity in deceptive marketing. I show that competition amplifies belief errors rather than correcting them, creating a strictly positive probability of complete market collapse.</p>
+          </div>
+        </details>
+      </div>
+
+      <h3>Work in progress</h3>
+
+      <div class="entry">
+        <!-- FILL IN: replace with the repository URL -->
+        <p class="title"><a href="https://github.com/danielthomas-econ">Income Segregation in an Agent-Based Housing Market</a></p>
+        <p class="meta">Since August 2025</p>
+        <p class="summary">Extends Schelling's segregation model with a budget-constrained rental market. Agents hold Cobb–Douglas preferences over neighborhood income composition and residual consumption, calibrated to Delhi income microdata from the CMIE. Sealed-bid auctions across 100 neighborhoods per round set rents endogenously and displace priced-out tenants; sorting is tracked by Theil decomposition into within- and between-neighborhood inequality over a population of one million agents. A below-market-rate set-aside is simulated against a Monte Carlo baseline to measure targeting by income bracket.</p>
+        <p class="links">
+          <a href="https://github.com/danielthomas-econ">Code</a>
+        </p>
+      </div>
+
+      <div class="entry">
+        <p class="title">State Data Center Policy Competitiveness Index</p>
+        <p class="meta">with Nathanya Eby Thomas. August 2026.</p>
+        <p class="summary">A 17-state policy index constructed from state government policy documents. I contributed the empirical analysis: a Monte Carlo sensitivity study over 20,000 Dirichlet-distributed dimension-weight vectors, using state-level rank distributions and dimension-sensitivity diagnostics to quantify rank stability and identify the policy dimensions that drive rank changes.</p>
+        <!-- FILL IN: add a paper or repo link here once it is public, e.g.
+        <p class="links"><a href="papers/data-center-index.pdf">Paper</a></p>
+        -->
+      </div>
+
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <div class="entry">
+        <!-- FILL IN: the Vitta article URL -->
+        <p class="title"><a href="#">Profits, Prices, and the Power of Information</a></p>
+        <p class="meta">with Madhura Mukund and Tanishi Singhal. <em>Vitta</em>, Annual Research Journal of the Finance and Investment Cell, Shri Ram College of Commerce, 2025.</p>
+        <p class="summary">Uses price theory and the Grossman–Stiglitz paradox to analyze the competitive race for information in algorithmic markets, and how profit incentives for acquiring information shape price discovery and market efficiency. Selected among 10 of 1,700 submissions from five countries.</p>
+        <p class="links">
+          <a href="#">Article</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="stack">
+        <li>
+          <span class="what">B.A. (Honors) Economics</span><br>
+          <span class="meta">St. Stephen's College, University of Delhi. Expected 2027, CGPA 9.39/10.</span>
+        </li>
+      </ul>
+      <dl class="tools spaced">
+        <dt>Core coursework</dt>
+        <dd>Microeconomics, Macroeconomics, Statistics, Mathematical Methods, Game Theory, Growth, Development</dd>
+        <dt>Electives</dt>
+        <dd>Advanced Econometrics, Real Analysis, Linear Algebra, Calculus, Graph Theory</dd>
+      </dl>
+    </section>
+
+    <section id="awards">
+      <h2>Awards</h2>
+      <ul class="stack">
+        <li>
+          <span class="what">Professor Nagpaul Fellow</span>, Department of Mathematics, St. Stephen's College, 2025.<br>
+          <span class="meta">The only second-year economics student selected; research in game theory with incomplete information.</span>
+        </li>
+        <li>
+          <span class="what">Project Euler</span>, top 4% of 1.35 million users.<br>
+          <span class="meta">58 problems solved, including problems at 50% difficulty in number theory, algorithms and dynamic programming.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="tools">
+      <h2>Software</h2>
+      <dl class="tools">
+        <dt>Languages</dt>
+        <dd>Python (NumPy, pandas, SciPy, SymPy, Numba, Matplotlib), R (tidyverse, ggplot2)</dd>
+        <dt>Methods</dt>
+        <dd>Dynamic programming, Markov chains, Monte Carlo methods, agent-based simulation; QuantEcon</dd>
+        <dt>Tools</dt>
+        <dd>Git, LaTeX</dd>
+      </dl>
+    </section>
+
+    <footer>
+      <p>Last updated September 2026.</p>
+    </footer>
+
+  </main>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Daniel Johann Thomas",
+  "email":"mailto:danieljohannthomas@gmail.com",
+  "url":"https://danielthomas-econ.github.io/",
+  "jobTitle":"Undergraduate student in economics",
+  "affiliation":{
+    "@type":"CollegeOrUniversity",
+    "name":"St. Stephen's College, University of Delhi"
+  },
+  "knowsAbout":["Information economics","Market efficiency","Game theory","Computational economics"],
+  "sameAs":["https://github.com/danielthomas-econ"]
+}
+</script>
+</body>
+</html>
