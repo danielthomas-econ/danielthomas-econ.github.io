@@ -1,0 +1,182 @@
+/* Daniel Johann Thomas: shared styles for every page */
+
+:root{
+  --paper:#FFFFFF;
+  --ink:#1B1B1B;
+  --soft:#3D3D3D;
+  --muted:#747474;
+  --rule:#E6E6E6;
+  --link:#3A3F7A;        /* same slate as the links in the CV */
+  --serif:"Palatino Linotype",Palatino,"Book Antiqua","TeX Gyre Pagella","URW Palladio L",Georgia,serif;
+  --measure:42rem;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;color-scheme:light;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  font-variant-numeric:oldstyle-nums;
+}
+
+a{color:var(--link);text-decoration:none;}
+a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em;}
+a:focus-visible,button:focus-visible{outline:1.5px solid var(--link);outline-offset:3px;border-radius:2px;}
+
+.wrap{max-width:var(--measure);margin:0 auto;padding:0 1.5rem;}
+
+/* ---------- top bar ---------- */
+.topbar{border-bottom:1px solid var(--rule);}
+.topbar .wrap{
+  display:flex;justify-content:space-between;align-items:baseline;
+  gap:.5rem 2rem;flex-wrap:wrap;
+  padding-top:1.35rem;padding-bottom:1.1rem;
+}
+.topbar.home .wrap{justify-content:flex-end;}
+.site-name{
+  color:var(--ink);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  font-size:.86rem;
+}
+.site-name:hover{text-decoration:none;color:var(--link);}
+.nav{list-style:none;margin:0;padding:0;display:flex;gap:1.6rem;}
+.nav a{
+  color:var(--soft);
+  font-size:.86rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  padding-bottom:.2rem;
+  border-bottom:1px solid transparent;
+}
+.nav a:hover{color:var(--link);text-decoration:none;border-bottom-color:var(--link);}
+.nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--ink);}
+
+/* ---------- page body ---------- */
+main.wrap{padding-top:3.4rem;padding-bottom:3.5rem;}
+h1{
+  font-size:2.1rem;
+  font-weight:400;
+  line-height:1.15;
+  letter-spacing:.005em;
+  margin:0 0 .4rem;
+}
+.affil{margin:0;color:var(--soft);line-height:1.5;}
+.lede{margin-top:2.1rem;}
+.lede p{margin:0 0 1rem;}
+.interests{color:var(--soft);}
+.lede .aside{color:var(--soft);font-style:italic;}
+.interests em{font-style:italic;}
+
+h2{
+  font-size:.78rem;
+  font-weight:400;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  color:var(--muted);
+  margin:0 0 1.35rem;
+  padding-bottom:.55rem;
+  border-bottom:1px solid var(--rule);
+}
+section{margin-top:3rem;}
+section:first-of-type{margin-top:2.6rem;}
+
+/* ---------- home: current work + contact ---------- */
+.feature .title{margin:0;font-weight:700;font-size:1.06rem;line-height:1.4;}
+.feature .title a{color:var(--ink);}
+.feature .title a:hover{color:var(--link);}
+.feature p{margin:.3rem 0 0;color:var(--soft);}
+.feature .more{margin-top:.55rem;font-size:.94rem;}
+
+.contact{list-style:none;margin:0;padding:0;}
+.contact li{display:flex;gap:1.25rem;margin:0 0 .35rem;}
+.contact .k{width:5.5rem;flex-shrink:0;color:var(--muted);font-style:italic;}
+
+/* ---------- research page ---------- */
+.page-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;}
+.expand-all{
+  appearance:none;border:0;background:none;padding:0;
+  font:inherit;font-size:.94rem;color:var(--link);cursor:pointer;
+}
+.expand-all:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em;}
+
+.paper{margin:0 0 1.75rem;}
+.paper:last-child{margin-bottom:0;}
+.paper .title{margin:0;font-size:1.06rem;font-weight:700;line-height:1.4;}
+.paper .title a{color:var(--ink);}
+.paper .title a:hover{color:var(--link);}
+.paper .meta{margin:.15rem 0 0;color:var(--soft);line-height:1.5;}
+.paper .note{margin:.15rem 0 0;color:var(--muted);font-style:italic;line-height:1.5;}
+
+.actions{
+  margin:.3rem 0 0;
+  display:flex;flex-wrap:wrap;align-items:baseline;
+  gap:.2rem 1.15rem;
+  font-size:.94rem;
+}
+.toggle{
+  appearance:none;border:0;background:none;padding:0;margin:0;
+  font:inherit;color:var(--link);cursor:pointer;
+}
+.toggle::after{content:" +";color:var(--muted);}
+.toggle[aria-expanded="true"]::after{content:" \2212";}
+.toggle:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em;}
+
+.abstract{
+  margin:.7rem 0 .2rem;
+  padding-left:1.05rem;
+  border-left:1px solid var(--rule);
+  color:var(--soft);
+  font-size:.96rem;
+  line-height:1.62;
+  hyphens:auto;
+}
+.abstract p{margin:0 0 .7rem;}
+.abstract p:last-child{margin-bottom:0;}
+.fig{margin:1.2rem 0 1.1rem;}
+.fig img{display:block;width:100%;height:auto;}
+.fig figcaption{margin-top:.45rem;font-size:.88rem;line-height:1.5;color:var(--soft);}
+.fig .n{font-style:italic;}
+.fig .fig-note{display:block;margin-top:.4rem;color:var(--muted);font-style:normal;}
+.abstract .kw{font-size:.9rem;color:var(--muted);margin:0;}
+.abstract p + .kw{margin-top:.7rem;}
+.abstract .kw + .kw{margin-top:0;}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--rule);}
+footer .wrap{
+  display:flex;justify-content:space-between;gap:.4rem 1.5rem;flex-wrap:wrap;
+  padding-top:1.1rem;padding-bottom:2.2rem;
+  color:var(--muted);font-size:.86rem;
+}
+footer a{color:var(--muted);}
+footer a:hover{color:var(--link);}
+footer .links{display:flex;gap:1.1rem;}
+
+/* ---------- small screens ---------- */
+@media (max-width:600px){
+  body{font-size:16.5px;}
+  .wrap{padding:0 1rem;}
+  .topbar .wrap{flex-direction:column;align-items:flex-start;gap:.6rem;}
+  .topbar.home .wrap{align-items:flex-start;}
+  main.wrap{padding-top:2.4rem;}
+  h1{font-size:1.8rem;}
+  section{margin-top:2.5rem;}
+  .contact li{display:block;}
+  .contact .k{display:block;width:auto;}
+}
+
+/* ---------- print: every abstract open, no chrome ---------- */
+@media print{
+  body{font-size:11pt;}
+  .topbar,.expand-all,.toggle,footer{display:none;}
+  .abstract[hidden]{display:block;}
+  a{color:var(--ink);}
+  main.wrap{padding-top:0;}
+}

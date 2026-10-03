@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research | Daniel Johann Thomas</title>
+<meta name="description" content="Working papers, publications and reports by Daniel Johann Thomas on information aggregation in prediction markets, deception in duopoly, and computational economics.">
+<link rel="canonical" href="https://danielthomas-econ.github.io/research.html">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="site-name" href="./">Daniel Johann Thomas</a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="./">About</a></li>
+        <li><a href="research.html" aria-current="page">Research</a></li>
+        <li><a href="Daniel%20Thomas%20-%20CV.pdf">CV</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="page-head">
+    <h1>Research</h1>
+    <button class="expand-all" type="button" aria-pressed="false">Show all abstracts</button>
+  </div>
+
+  <section aria-labelledby="wp">
+    <h2 id="wp">Working Papers</h2>
+
+    <article class="paper" id="polymarket">
+      <p class="title"><a href="papers/polymarket.pdf">Priced In, Bit by Bit: Measuring Information Aggregation in Prediction Markets</a></p>
+      <p class="meta">September 2026</p>
+      <p class="actions">
+        <button class="toggle" type="button" aria-expanded="false" aria-controls="abs-polymarket">Abstract</button>
+        <a href="papers/polymarket.pdf">PDF</a>
+        <a href="https://github.com/danielthomas-econ/pricing_in_information">Code</a>
+      </p>
+<!-- Abstract quoted from the paper. -->
+      <div class="abstract" id="abs-polymarket">
+        <p>Prediction markets are typically evaluated on whether their prices are well calibrated forecasts of eventual outcomes. This paper asks a different question: how informative are prices? Using Shannon entropy and mutual information on a panel of roughly 50,000 closed binary markets on Polymarket, we find that observing prices on average resolves 38.3% of uncertainty surrounding outcomes, and less in markets that are part of a set of mutually exclusive outcomes. Among markets open for over four months, which are more informative than average, prices reduce 42.2% of uncertainty four months from resolution, rising to 85.4% one day from resolution. Finally, following Samuelson&rsquo;s martingales, we show that while price changes are statistically predictable, any departure from a fair game is economically negligible. These findings are largely consistent with Hayek&rsquo;s claim that prices aggregate dispersed information.</p>
+        <p class="kw"><em>Keywords:</em> prediction markets, information aggregation, market efficiency, mutual information, entropy</p>
+        <p class="kw"><em>JEL:</em> D83, G14, C13</p>
+        <figure class="fig">
+          <a href="img/polymarket_info_horizon.png"><img src="img/polymarket_info_horizon.png" width="1400" height="866" loading="lazy" alt="Share of outcome uncertainty resolved by the price against days before the market closed, on a log scale, for four cohorts of markets by minimum trading life; every curve rises towards the close, and the four-month cohort climbs from about 42 percent at 120 days to about 85 percent at one day."></a>
+          <figcaption><span class="n">Figure 1.</span> Information accumulates long before the outcome is obvious. Share of outcome uncertainty resolved by the price, by days before the market closed, for balanced cohorts of markets that traded for at least one week, one month, two months and four months.</figcaption>
+        </figure>
+        <figure class="fig">
+          <a href="img/polymarket_gain_per_day.png"><img src="img/polymarket_gain_per_day.png" width="1400" height="871" loading="lazy" alt="Average information gained per day, in percentage points of outcome uncertainty, across stretches of time before the market closed, for the same four cohorts; gains rise from about 0.2 points per day four months out to between 1 and 3 points per day in the final days."></a>
+          <figcaption><span class="n">Figure 2.</span> Prices learn faster as resolution approaches. Average information gained per day, in percentage points of outcome uncertainty, in each stretch of time before the market closed.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="paper" id="deception">
+      <p class="title"><a href="papers/nagpaul%20paper.pdf">Drawing the Last Straw: Competition and Deception in a Duopoly</a></p>
+      <p class="meta">Professor Nagpaul Research Fellowship, advised by Prof. Anant Singh. May 2026</p>
+      <p class="actions">
+        <button class="toggle" type="button" aria-expanded="false" aria-controls="abs-duopoly">Abstract</button>
+        <a href="papers/nagpaul%20paper.pdf">PDF</a>
+      </p>
+      <!-- Abstract quoted from the paper. -->
+      <div class="abstract" id="abs-duopoly">
+        <p>Deception, such as hidden fees or misleading product names, makes an offer look better, but only up to a point. The deception that pushes a consumer past it is the last straw, and she abandons the firm. How much it takes depends on what she knows, and firms rarely know how much their customers will notice. We study a duopoly in which consumers buy from the most deceptive firm whose deception they have not detected. When firms know how discerning consumers are, competition escalates deception, and in the mixed-strategy equilibrium average deception exceeds the monopoly level by about 41 per cent. When they do not, uncertainty cuts both ways. If an undiscerning market is unlikely, firms deceive less on average, and earn less, than if they knew. If it is likely enough, firms gamble on it, and consumers periodically see through a firm and abandon it outright. These collapses are an equilibrium outcome, and they are most likely when firms are fairly, but not fully, confident that their customers will not notice.</p>
+        <p class="kw"><em>Keywords:</em> deception, consumer tolerance, incomplete information, oligopoly, behavioral industrial organization</p>
+        <p class="kw"><em>JEL:</em> C72, D81, D91, L13</p>
+        <figure class="fig">
+          <a href="img/deception_escalation.png"><img src="img/deception_escalation.png" width="1099" height="683" loading="lazy" alt="Two curves showing duopoly deception relative to the monopoly level, falling as the revenue elasticity of deception rises but staying above one; at elasticity one, average deception is 1.41 and the highest level played is 1.71 times the monopoly level."></a>
+          <figcaption><span class="n">Figure 1.</span> Competition escalates deception. With known consumer tolerance, duopolists deceive more than a monopolist at every revenue elasticity &gamma;, and the gap grows without bound as &gamma; falls. At &gamma; = 1, average deception is 41% above the monopoly level.</figcaption>
+        </figure>
+        <figure class="fig">
+          <a href="img/deception_bust.png"><img src="img/deception_bust.png" width="1095" height="675" loading="lazy" alt="Probability of a bust plotted against the prior probability that the market is robust, for two levels of relative tolerance; each curve is zero up to a threshold, rises to a peak, then falls to zero along the upper bound of one minus the prior."></a>
+          <figcaption><span class="n">Figure 2.</span> Busts are an equilibrium outcome. The probability that a firm overreaches and loses its whole market is zero while firms stay cautious, peaks when they are fairly but not fully confident the market is robust, and vanishes as that confidence becomes certainty.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="paper" id="housing">
+      <p class="title"><a href="https://github.com/danielthomas-econ/schelling_income_model">Income Segregation in an Agent-Based Housing Market</a></p>
+      <p class="actions">
+        <button class="toggle" type="button" aria-expanded="false" aria-controls="abs-housing">Summary</button>
+        <a href="https://github.com/danielthomas-econ/schelling_income_model">Code</a>
+      </p>
+      <div class="abstract" id="abs-housing">
+        <p>Schelling showed that mild preferences over one&rsquo;s neighbors can produce stark segregation. This project asks what happens when those preferences have to be paid for. Agents with incomes drawn from a Delhi income distribution estimated from CMIE data rent homes across 100 neighborhoods. Each agent values two things, combined in a Cobb&ndash;Douglas utility function: the share of their neighbors who earn at least as much as they do, and the share of their housing budget left after rent. As in Schelling, only agents who are unhappy with their neighborhood search for a new one. Each searching agent bids its bid-rent, the highest rent at which a home is still better than nonmarket housing, and the same rule decides when a tenant is priced out. Rents, moves and displacement therefore all follow from a single set of preferences. Sorting is measured by decomposing the Theil index into inequality within and between neighborhoods.</p>
+        <p>The model is then used to evaluate an affordable-housing set-aside that reserves 20% of each neighborhood&rsquo;s homes at 60% of the market rent for the poorest 30% of earners. Welfare is measured as each agent&rsquo;s equivalent variation as a share of income, comparing every agent with themselves in a matched baseline city. The set-aside lowers welfare for the median agent by about 3.5% of income, and two-thirds of agents are worse off, including most of those it targets. Because the discount is pegged to market rents, reserved homes in expensive neighborhoods stay unaffordable to the households eligible for them. They sit empty, market supply shrinks, and rents rise across the income distribution: the poorest tenth&rsquo;s rent share goes from 14% to 20% of income, and the share of agents in nonmarket housing rises from 6.8% to 12.1%.</p>
+        <p class="kw"><em>Keywords:</em> residential segregation, Schelling model, agent-based modeling, housing markets, inclusionary zoning</p>
+        <p class="kw"><em>JEL:</em> R21, R23, R31, C63, I38</p>
+        <figure class="fig">
+          <a href="img/housing_theil.png"><img src="img/housing_theil.png" loading="lazy" alt="Between-neighborhood Theil index over 100 rounds for the baseline and the set-aside; both rise from zero along an S-shaped curve, the baseline levelling off near 0.19 by round 30 and the set-aside a few rounds later at a similar level."></a>
+          <figcaption><span class="n">Figure 1.</span> Income sorting emerges from the housing market. Between-neighborhood Theil index by round, averaged over 30 matched runs with 95% confidence bands. From a random start, the city sorts by income within about 30 rounds. The set-aside slows sorting but does not lower its final level.
+            <span class="fig-note">The between-neighborhood Theil index measures how much of the city&rsquo;s income inequality comes from differences between neighborhoods rather than within them, and is zero when every neighborhood has the same average income. Its rise from zero to about 0.19 means rich and poor households, though placed at random, end up in different neighborhoods, and the set-aside only delays this before settling slightly higher than the baseline.</span></figcaption>
+        </figure>
+        <figure class="fig">
+          <a href="img/housing_welfare.png"><img src="img/housing_welfare.png" loading="lazy" alt="Two panels by income bracket. Left: the median agent's equivalent variation is negative in every bracket, between about 2 and 7 percent of income for most brackets. Right: in every bracket a minority is made better off, between about 6 and 42 percent, and a majority worse off."></a>
+          <figcaption><span class="n">Figure 2.</span> Who the set-aside reaches. Left: the median agent&rsquo;s welfare change in each income bracket, as a share of income; negative means worse off. Right: the share of each bracket made better and worse off. Brackets left of the dashed line are eligible. Every bracket has winners, but in none are they a majority.</figcaption>
+        </figure>
+      </div>
+    </article>
+  </section>
+
+  <section aria-labelledby="pub">
+    <h2 id="pub">Publications</h2>
+
+    <article class="paper">
+      <p class="title"><a href="papers/Vitta25_Profits_Prices_Information.pdf">Profits, Prices, and the Power of Information</a></p>
+      <p class="meta">with Madhura Mukund and Tanishi Singhal. <em>Vitta</em>, Shri Ram College of Commerce, 2025</p>
+      <p class="note">Selected as one of 10 articles from over 1,700 submissions across five countries.</p>
+      <p class="actions">
+        <button class="toggle" type="button" aria-expanded="false" aria-controls="abs-vitta">Summary</button>
+        <a href="papers/Vitta25_Profits_Prices_Information.pdf">PDF</a>
+      </p>
+      <div class="abstract" id="abs-vitta">
+        <p>The price mechanism aggregates dispersed information only when someone trades on it, and we argue that profit, as the opportunity cost of keeping private information secret, is what draws that information into prices. Following Grossman and Stiglitz, some inefficiency must persist for this incentive to survive, which sets off a race to find and exploit it. Renaissance Technologies&rsquo; Medallion Fund shows the race at its best, with quantitative models improving price discovery; SEBI&rsquo;s allegations against Jane Street show its dark reflection, where profit comes from injecting noise into prices rather than information.</p>
+      </div>
+    </article>
+  </section>
+
+  <section aria-labelledby="reports">
+    <h2 id="reports">Policy Reports</h2>
+
+    <article class="paper">
+      <p class="title"><a href="papers/State%20Data%20Centre%20Policy%20Index%20Report.pdf">State Data Centre Policy Index</a></p>
+      <p class="meta">with Nathanya Eby Thomas. August 2026</p>
+      <p class="actions">
+        <button class="toggle" type="button" aria-expanded="false" aria-controls="abs-datacentre">Summary</button>
+        <a href="papers/State%20Data%20Centre%20Policy%20Index%20Report.pdf">PDF</a>
+      </p>
+      <!-- Text taken from Sections 1.1 and 1.2 of the report. -->
+      <div class="abstract" id="abs-datacentre">
+        <p>The project aims to build a common, points-based framework to compare the Data Centre policies notified by Indian states, and to test how robust the resulting comparison is. The study covers 17 states with a publicly available Data Centre policy, or with explicit Data Centre provisions inside a broader industrial or IT policy. Each state was scored against a 33-incentive Scorecard, with a maximum of 132 points, grouped into five policy dimensions. A 20,000-trial Monte Carlo simulation was then used to test how sensitive the resulting state ranking is to the weight given to each of the five dimensions.</p>
+        <p>The Monte Carlo results show that states competing mainly on the size of their fiscal package face the greatest rank instability. Rajasthan&rsquo;s balanced profile across all five dimensions is what makes it the only state holding a Top 4 position in all 20,000 trials. States should treat dimensional balance, not incentive size alone, as the design objective.</p>
+        <figure class="fig">
+          <a href="img/datacentre_rank_stability.jpg"><img src="img/datacentre_rank_stability.jpg" width="1333" height="1190" loading="lazy" alt="Box plots of each of the 17 states' rank across 20,000 randomly weighted dimension schemes. Rajasthan sits at rank 1 with almost no spread and Kerala and Bihar stay at the bottom, while mid-table states such as Chhattisgarh, Telangana and Gujarat span wide ranges of ranks."></a>
+          <figcaption><span class="n">Figure 1.</span> Rank stability across 20,000 randomly weighted dimension schemes. Box = interquartile range, whiskers = 1.5&times;IQR, red line = median rank, diamond = equal-weight rank, circle = mean rank across trials. Balanced Rajasthan holds first place under almost every weighting; fiscally concentrated Chhattisgarh ranges from 1st to 16th.</figcaption>
+        </figure>
+      </div>
+    </article>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Last updated October 2026</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggles=[].slice.call(document.querySelectorAll('.toggle'));
+  function set(btn,open){
+    btn.setAttribute('aria-expanded',String(open));
+    document.getElementById(btn.getAttribute('aria-controls')).hidden=!open;
+  }
+  toggles.forEach(function(btn){set(btn,false);});
+  toggles.forEach(function(btn){
+    btn.addEventListener('click',function(){set(btn,btn.getAttribute('aria-expanded')!=='true');});
+  });
+  var all=document.querySelector('.expand-all');
+  all.addEventListener('click',function(){
+    var open=all.getAttribute('aria-pressed')!=='true';
+    toggles.forEach(function(b){set(b,open);});
+    all.setAttribute('aria-pressed',String(open));
+    all.textContent=open?'Hide all abstracts':'Show all abstracts';
+  });
+})();
+</script>
+</body>
+</html>
